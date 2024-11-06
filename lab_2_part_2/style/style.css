@@ -1,0 +1,348 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+	}
+
+body{
+	background-color: #F2F4F7;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	position: relative;
+    margin: 0px;
+	word-break: normal;
+    padding-bottom: 30px;
+}
+
+.info_xianxia{
+	display: flex;
+}
+
+.info_xianxia_text{
+    background-color: white;
+    font-size: 2.6vw;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.info_xianxia img{
+	height: 70vw;
+	float: right;
+	background-color: white;
+}
+
+aside{
+	background-color: white;
+	float: left;
+	width:25%;
+	margin-right: 20px;
+}
+
+#catalog{
+    display: flex;
+	margin-right: 20px;
+}
+
+article img{
+	float:left;
+	height: 450px;
+}
+
+footer{
+	text-align: center;
+	width:100%;
+	height: 50px;
+    margin-top: 1%;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    padding: 20px;
+    height:240px
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .news_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .news_date{
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .title{
+    padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main_text{
+	display: flex;
+	padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.lists_text{
+    font-size: 25px; 
+    background-color: white;
+    padding: 15px;
+}
+
+ol{
+	margin-top: 0px; 
+}
+
+ol a:hover{
+    color: #061826;
+}
+
+ol a.active{
+    color: #89AAE6;
+}
+
+li {
+    padding: 20px; 
+}
+
+li a:hover{
+	color: #061826;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #89AAE6;
+    padding: 20px 20px;
+}
+
+.site_name{
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    color: #061826;
+    padding: 14px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 25px; 
+    border-radius: 4px;
+}
+
+header a:hover {
+    background-color: #3C4E69;
+    color: #F2F4F7;
+}
+
+header a.active {
+    background-color: #3C4E69;
+    color: #F2F4F7;
+}
+
+.site_name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.review{
+	padding-left: 20px;
+    padding-bottom: 20px;
+	align-items: baseline;
+    background-color: white;
+}
+
+.cursive_review{
+    padding-left: 20px;
+    padding-top: 20px;
+    align-items: baseline;
+    background-color: white;
+}
+
+.small_pole{
+    margin: 10px;
+    padding:10px;
+    border-radius:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.wide_small_pole{
+    margin: 10px;
+    padding:10px;
+    border-radius:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    width: 350px;
+}
+
+.big_pole{
+    margin: 10px;
+    padding:10px;
+    border-radius:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    width: 550px;
+    height: 200px;
+}
+
+.submittion_button{
+    margin: 10px;
+    background-color:#89AAE6;
+    border-radius: 18px;
+    padding:10px;
+    border: solid 1px transparent;
+}
+
+.submittion_button:hover{
+    background-color: #3C4E69;
+    color: #F2F4F7;
+}
+
+.login-form {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 40px 30px;
+}
+
+.form_reg {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 15px; 
+}
+
+.user_type {
+    background-color: #3C4E69;
+    color: #F2F4F7;
+    border-radius: 18px;
+    padding:10px;
+    margin: 10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.user_type:hover{
+    background-color:#F2F4F7;
+    color: #89AAE6;
+}
+
+.a_edit{
+    display: flex;
+    background-color:white;
+}
+
+.a_edit a.a_del{
+    margin-right: 20px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.celebration_button{
+    margin: 10px;
+    background-color:#89AAE6;
+    border-radius: 18px;
+    padding:10px;
+    border: solid 1px transparent;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.celebration_button:hover{
+    background-color:#3C4E69;
+    color:#ffffff;
+}
+
+#timer{
+    padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.timer_and_button{
+    display: flex;
+    background-color:white;
+}
+
+.modal {
+	display: none; 
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.modal .modal_content {
+    background-color:#F2F4F7;
+    margin: 15% auto;
+    padding: 15px;
+    width: 50%;
+    border-radius: 18px;
+    border: solid 1px transparent;
+}
+
+.modal .modal_content .close_modal_window {
+    color: black; 
+    float: right; 
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal .modal_content .close_modal_window:hover{
+	color: #89AAE6;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.pagination a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: black; /* Цвет текста по умолчанию */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    margin: 0 5px; /* Отступы между кнопками */
+    border: 1px solid #ccc; /* Обводка кнопок */
+    border-radius: 5px; /* Закругление углов */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета */
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+.pagination a.active {
+    background-color: #3C4E69; /* Фиолетовый цвет для активной страницы */
+    color: white; /* Цвет текста для активной страницы */
+    border: none; /* Убираем обводку для активной страницы */
+}

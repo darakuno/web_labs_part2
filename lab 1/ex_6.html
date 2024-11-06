@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    // здесь будет отображаться текст
+    <div id="c" style="color:blue">Вы выбрали цвет текста: черный</div>
+
+    <script language="JavaScript">
+        // пользователь выбирает цвет текста
+        var tcolor = prompt("Выберите цвет текста: red, blue, green, yellow, black", "black");
+        // задается текст
+        document.getElementById("c").innerHTML = "Вы выбрали цвет текста: " + tcolor;
+        // задается цвет текста
+        document.getElementById("c").style.color = tcolor;
+    </script>
+</body>
+
+</html>
