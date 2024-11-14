@@ -11,46 +11,67 @@ $current_page.='.php'; ?>
     const messagesDiv = document.getElementById('messages');
     const messageInput = document.getElementById('message-input');
     const sendButton = document.getElementById('send-button');
+    var prev_send_message;
 
-    // Создаем WebSocket соединение
-    const socket = new WebSocket('ws://localhost:8080');
+    function showMessage(messageHTML, messageType) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message ' + messageType;
+        messageDiv.innerHTML = messageHTML;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight; 
+    }
 
-    // Обработка входящих сообщений
-    socket.onmessage = function(event) {
-        const messageElement = document.createElement('div');
-        messageElement.textContent = event.data;
+    const websocket = new WebSocket("ws://localhost:8090");
 
-        // Добавляем класс для сообщения поддержки
-        messageElement.classList.add('message', 'support');
-        
-        messagesDiv.appendChild(messageElement);
-        messagesDiv.scrollTop = messagesDiv.scrollHeight; // Прокручиваем вниз
+    websocket.onopen = function(event) { 
+        showMessage("Соединение установлено!", 'support');      
     };
 
-    // Отправка сообщения
-    sendButton.onclick = function() {
-        const message = messageInput.value;
-        if (message) {
-            const messageElement = document.createElement('div');
-            messageElement.textContent = message;
+    websocket.onmessage = function(event) {
+        const Data = JSON.parse(event.data);
+        // Проверяем, если сообщение не от пользователя
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = Data.message; 
+        const messageText = tempElement.textContent || tempElement.innerText;
+        const message = messageText.substring(messageText.indexOf(':') + 1).trim();
 
-            // Добавляем класс для сообщения пользователя
-            messageElement.classList.add('message', 'user');
-            
-            messagesDiv.appendChild(messageElement);
-            socket.send(message); // Отправляем сообщение на сервер
-            messageInput.value = ''; // Очищаем поле ввода
-            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Прокручиваем вниз
+        if (message != prev_send_message) {
+            showMessage(Data.message, 'support');
         }
+        // console.log("mes", message);
+        // console.log("prev mes", prev_send_message);
     };
 
-    // Обработка ошибок
-    socket.onerror = function(error) {
-        console.error('Ошибка WebSocket:', error);
+    websocket.onerror = function(event) {
+        showMessage("Проблема из-за ошибки", 'support');
     };
+
+    websocket.onclose = function(event) {
+        showMessage("Соединение закрыто", 'support');
+    };
+
+    sendButton.addEventListener("click", function() {
+        const message = messageInput.value;
+        if (message.trim() !== '') {
+            const user_name = <?php echo json_encode(isset($_SESSION['user_login']) ? $_SESSION['user_login'] : "Пользователь"); ?>;
+            const messageJSON = {
+                chat_user: user_name,
+                chat_message: message
+            };
+            prev_send_message = message;
+            console.log(prev_send_message);
+            websocket.send(JSON.stringify(messageJSON));
+            showMessage(message, 'user'); 
+            messageInput.value = ''; // Очистить поле после отправки
+        }
+    });
+
+    messageInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendButton.click(); // Отправить сообщение при нажатии Enter
+        }
+    });
 </script>
-
-
 
 <style>
     #messages {
@@ -101,7 +122,7 @@ $current_page.='.php'; ?>
     }
 
     .message.support {
-        background-color: #f8d7da;
+        background-color: #deecff;
         text-align: left; 
     }
 </style>

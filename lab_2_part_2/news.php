@@ -113,7 +113,7 @@ function loadMoreNewsUsingXHR() {
 }
 
 function loadMoreNews() {
-    loadMoreNewsUsingFetch(); //loadMoreNewsUsingXHR();//
+    loadMoreNewsUsingFetch();//loadMoreNewsUsingXHR(); //
 }
 
 function handleScroll() {
