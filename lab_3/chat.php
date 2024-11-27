@@ -35,7 +35,7 @@ $current_page.='.php'; ?>
         const messageText = tempElement.textContent || tempElement.innerText;
         const message = messageText.substring(messageText.indexOf(':') + 1).trim();
 
-        if (message != prev_send_message) {
+        if (message != prev_send_message && message != '') {
             showMessage(Data.message, 'support');
         }
         // console.log("mes", message);
@@ -53,7 +53,7 @@ $current_page.='.php'; ?>
     sendButton.addEventListener("click", function() {
         const message = messageInput.value;
         if (message.trim() !== '') {
-            const user_name = <?php echo json_encode(isset($_SESSION['user_login']) ? $_SESSION['user_login'] : "Пользователь"); ?>;
+            const user_name = <?php echo json_encode(isset($_SESSION['user_login']) ? $_SESSION['user_login'] : "Гость"); ?>;
             const messageJSON = {
                 chat_user: user_name,
                 chat_message: message
