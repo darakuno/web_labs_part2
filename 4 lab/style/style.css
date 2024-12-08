@@ -1,0 +1,179 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+	}
+
+body{
+	background-color: #F2F4F7;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	position: relative;
+    margin: 0px;
+	word-break: normal;
+    padding-bottom: 30px;
+}
+
+.info_xianxia{
+	display: flex;
+}
+
+.info_xianxia_text{
+    background-color: white;
+    font-size: 2.6vw;
+	margin-right: 20px;
+	padding: 20px;
+}
+
+.info_xianxia img{
+	height: 70vw;
+	float: right;
+	background-color: white;
+}
+
+aside{
+	background-color: white;
+	float: left;
+	width:25%;
+	margin-right: 20px;
+}
+
+#catalog{
+    display: flex;
+	margin-right: 20px;
+}
+
+article img{
+	float:left;
+	height: 450px;
+}
+
+footer{
+	text-align: center;
+	width:100%;
+	height: 50px;
+    margin-top: 1%;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    padding: 20px;
+    height:240px
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .news_title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .news_date{
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .title{
+    padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main_text{
+	display: flex;
+	padding-left: 20px;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.lists_text{
+    font-size: 25px; 
+    background-color: white;
+    padding: 15px;
+}
+
+ol{
+	margin-top: 0px; 
+}
+
+ol a:hover{
+    color: #061826;
+}
+
+ol a.active{
+    color: #89AAE6;
+}
+
+li {
+    padding: 20px; 
+}
+
+li a:hover{
+	color: #061826;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #89AAE6;
+    padding: 20px 20px;
+}
+
+.site_name{
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    color: #061826;
+    padding: 14px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 25px; 
+    border-radius: 4px;
+}
+
+header a:hover {
+    background-color: #3C4E69;
+    color: #F2F4F7;
+}
+
+header a.active {
+    background-color: #3C4E69;
+    color: #F2F4F7;
+}
+
+.site_name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.review{
+	padding-left: 20px;
+    padding-bottom: 20px;
+	align-items: baseline;
+    background-color: white;
+}
+
+.cursive_review{
+    padding-left: 20px;
+    padding-top: 20px;
+    align-items: baseline;
+    background-color: white;
+}
